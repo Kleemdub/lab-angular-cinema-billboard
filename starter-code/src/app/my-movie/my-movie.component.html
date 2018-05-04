@@ -1,0 +1,48 @@
+<!-- <h2>Movie details</h2> -->
+
+
+<a routerLink="/"><< Back to the Home Page</a>
+
+<h5>ROOM {{movieInfo?.room}}</h5>
+<h3>{{movieInfo?.title}}</h3>
+
+<section>
+  <img [src]="movieInfo?.poster" />
+</section>
+
+<section>
+
+  <h5>Genres</h5>
+  <ul>
+    <li *ngFor="let oneGenre of movieInfo?.genres">
+      <p>{{oneGenre}}</p>
+    </li>
+  </ul>
+
+  <h5>Year</h5>
+  <p>{{movieInfo?.year}}</p>
+
+  <h5>Director</h5>
+  <p>{{movieInfo?.director}}</p>
+
+  <h5>Actors</h5>
+  <ul>
+    <li *ngFor="let oneActor of movieInfo?.actors">
+      <p>{{oneActor}}</p>
+    </li>
+  </ul>
+
+  <h5>Schedule</h5>
+  <ul>
+    <li *ngFor="let oneHour of movieInfo?.hours">
+      <p>{{oneHour}}</p>
+    </li>
+  </ul>
+
+  <h5>Synopsis</h5>
+  <p>{{movieInfo?.synopsis}}</p>
+  
+
+  
+
+</section>

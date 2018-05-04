@@ -1,0 +1,11 @@
+<!-- <h2>All the movies</h2> -->
+
+<ul>
+  <li class="one-movie-item" *ngFor="let oneMovie of cinemaService.movies">
+    <h3>ROOM {{oneMovie.room}}</h3>
+    <img [src]="oneMovie.poster" />
+    <p>{{oneMovie.title}}</p>
+    <a [routerLink]="['/movie', oneMovie.id]">+ More infos</a>
+  </li>
+</ul>
+<div class="clear-both"></div>
